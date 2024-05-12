@@ -399,6 +399,9 @@ debug/moc_bullet.cpp: ../../../bullet.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		../../../enemy.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsItem \
 		G:/qt/6.7.0/mingw_64/include/QtMultimedia/QMediaPlayer \
@@ -624,6 +627,9 @@ debug/moc_enemy.cpp: ../../../enemy.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/QProgressBar \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/qprogressbar.h \
 		debug/moc_predefs.h \
@@ -828,6 +834,9 @@ debug/moc_gamecontroller.cpp: ../../../gamecontroller.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		../../../enemy.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsitem.h \
@@ -1046,6 +1055,9 @@ debug/moc_map.cpp: ../../../map.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		debug/moc_predefs.h \
 		G:/qt/6.7.0/mingw_64/bin/moc.exe
 	G:\qt\6.7.0\mingw_64\bin\moc.exe $(DEFINES) --include "G:/Saif/computer science/TowerDefenseGame/TowerDefenseGame/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/debug/moc_predefs.h" -IG:/qt/6.7.0/mingw_64/mkspecs/win32-g++ -I"G:/Saif/computer science/TowerDefenseGame" -IG:/qt/6.7.0/mingw_64/include -IG:/qt/6.7.0/mingw_64/include/QtMultimedia -IG:/qt/6.7.0/mingw_64/include/QtWidgets -IG:/qt/6.7.0/mingw_64/include/QtGui -IG:/qt/6.7.0/mingw_64/include/QtNetwork -IG:/qt/6.7.0/mingw_64/include/QtCore -I. -IG:/qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IG:/qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IG:/qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IG:/qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IG:/qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IG:/qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\..\..\map.h -o debug\moc_map.cpp
@@ -1823,6 +1835,9 @@ debug/moc_startmenu.cpp: ../../../startmenu.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		../../../gamecontroller.h \
 		G:/qt/6.7.0/mingw_64/include/QtCore/QTimer \
 		G:/qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
@@ -2048,6 +2063,9 @@ debug/moc_thirdhelp.cpp: ../../../thirdhelp.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		../../../gamecontroller.h \
 		G:/qt/6.7.0/mingw_64/include/QtCore/QTimer \
 		G:/qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
@@ -2274,6 +2292,9 @@ debug/moc_tower.cpp: ../../../tower.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		../../../enemy.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsItem \
 		G:/qt/6.7.0/mingw_64/include/QtMultimedia/QMediaPlayer \
@@ -2529,6 +2550,9 @@ debug/bullet.o: ../../../bullet.cpp ../../../bullet.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		../../../enemy.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsItem \
 		G:/qt/6.7.0/mingw_64/include/QtMultimedia/QMediaPlayer \
@@ -2746,6 +2770,9 @@ debug/cannontower.o: ../../../cannontower.cpp ../../../cannontower.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		../../../enemy.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsItem \
 		G:/qt/6.7.0/mingw_64/include/QtMultimedia/QMediaPlayer \
@@ -2971,6 +2998,9 @@ debug/enemy.o: ../../../enemy.cpp ../../../Enemy.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/QProgressBar \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/qprogressbar.h \
 		G:/qt/6.7.0/mingw_64/include/QtCore/QTimer \
@@ -3184,6 +3214,9 @@ debug/gamecontroller.o: ../../../gamecontroller.cpp ../../../gamecontroller.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		../../../enemy.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsitem.h \
@@ -3407,6 +3440,9 @@ debug/main.o: ../../../main.cpp ../../../startmenu.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		../../../gamecontroller.h \
 		G:/qt/6.7.0/mingw_64/include/QtCore/QTimer \
 		G:/qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
@@ -3629,10 +3665,21 @@ debug/map.o: ../../../map.cpp ../../../map.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/QMouseEvent \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsRectItem \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsitem.h \
-		G:/qt/6.7.0/mingw_64/include/QtGui/qpainterpath.h
+		G:/qt/6.7.0/mingw_64/include/QtGui/qpainterpath.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsProxyWidget \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsproxywidget.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qgraphicswidget.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qgraphicslayoutitem.h \
+		G:/qt/6.7.0/mingw_64/include/QtGui/QFont \
+		../../../shop.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QDialog \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qdialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\map.o ..\..\..\map.cpp
 
 debug/help.o: ../../../help.cpp ../../../help.h \
@@ -3824,30 +3871,19 @@ debug/help.o: ../../../help.cpp ../../../help.h \
 		G:/qt/6.7.0/mingw_64/include/QtCore/qlocale.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		ui_help.h \
-		G:/qt/6.7.0/mingw_64/include/QtCore/QVariant \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/QApplication \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qapplication.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/QLineEdit \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qlineedit.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
-		G:/qt/6.7.0/mingw_64/include/QtGui/qtextcursor.h \
-		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
-		G:/qt/6.7.0/mingw_64/include/QtGui/qtextformat.h \
-		G:/qt/6.7.0/mingw_64/include/QtGui/qpen.h \
-		G:/qt/6.7.0/mingw_64/include/QtGui/qtextoption.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/QTextEdit \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qtextedit.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
 		../../../startmenu.h \
 		../../../map.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsScene \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsscene.h \
+		G:/qt/6.7.0/mingw_64/include/QtGui/qpen.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/QLabel \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/qlabel.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
+		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		../../../gamecontroller.h \
 		G:/qt/6.7.0/mingw_64/include/QtCore/QTimer \
 		G:/qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
@@ -4064,30 +4100,19 @@ debug/secondhelper.o: ../../../secondhelper.cpp ../../../secondhelper.h \
 		G:/qt/6.7.0/mingw_64/include/QtCore/qlocale.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		ui_secondhelper.h \
-		G:/qt/6.7.0/mingw_64/include/QtCore/QVariant \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/QApplication \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qapplication.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/QLineEdit \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qlineedit.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
-		G:/qt/6.7.0/mingw_64/include/QtGui/qtextcursor.h \
-		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
-		G:/qt/6.7.0/mingw_64/include/QtGui/qtextformat.h \
-		G:/qt/6.7.0/mingw_64/include/QtGui/qpen.h \
-		G:/qt/6.7.0/mingw_64/include/QtGui/qtextoption.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/QTextEdit \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qtextedit.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
 		../../../thirdhelp.h \
 		../../../map.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsScene \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsscene.h \
+		G:/qt/6.7.0/mingw_64/include/QtGui/qpen.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/QLabel \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/qlabel.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
+		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		../../../gamecontroller.h \
 		G:/qt/6.7.0/mingw_64/include/QtCore/QTimer \
 		G:/qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
@@ -4304,17 +4329,7 @@ debug/shop.o: ../../../shop.cpp ../../../shop.h \
 		G:/qt/6.7.0/mingw_64/include/QtCore/qlocale.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		ui_shop.h \
-		G:/qt/6.7.0/mingw_64/include/QtCore/QVariant \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/QApplication \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qapplication.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/QLabel \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qlabel.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
-		G:/qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
-		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h
+		G:/qt/6.7.0/mingw_64/include/QtGui/QPixmap
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\shop.o ..\..\..\shop.cpp
 
 debug/startmenu.o: ../../../startmenu.cpp ../../../startmenu.h \
@@ -4514,6 +4529,9 @@ debug/startmenu.o: ../../../startmenu.cpp ../../../startmenu.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		../../../gamecontroller.h \
 		G:/qt/6.7.0/mingw_64/include/QtCore/QTimer \
 		G:/qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
@@ -4539,23 +4557,15 @@ debug/startmenu.o: ../../../startmenu.cpp ../../../startmenu.h \
 		../../../bullet.h \
 		G:/qt/6.7.0/mingw_64/include/QtCore/QString \
 		ui_startmenu.h \
-		G:/qt/6.7.0/mingw_64/include/QtCore/QVariant \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/QApplication \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qapplication.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/QLineEdit \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qlineedit.h \
-		G:/qt/6.7.0/mingw_64/include/QtGui/qtextcursor.h \
-		G:/qt/6.7.0/mingw_64/include/QtGui/qtextformat.h \
-		G:/qt/6.7.0/mingw_64/include/QtGui/qtextoption.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		../../../help.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsView \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsview.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qpainter.h \
+		G:/qt/6.7.0/mingw_64/include/QtGui/qtextoption.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/qscrollarea.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractscrollarea.h
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QApplication \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qapplication.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\startmenu.o ..\..\..\startmenu.cpp
 
 debug/teslatower.o: ../../../teslatower.cpp 
@@ -4758,6 +4768,9 @@ debug/thirdhelp.o: ../../../thirdhelp.cpp ../../../thirdhelp.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		../../../gamecontroller.h \
 		G:/qt/6.7.0/mingw_64/include/QtCore/QTimer \
 		G:/qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
@@ -4783,25 +4796,15 @@ debug/thirdhelp.o: ../../../thirdhelp.cpp ../../../thirdhelp.h \
 		../../../bullet.h \
 		G:/qt/6.7.0/mingw_64/include/QtCore/QString \
 		ui_thirdhelp.h \
-		G:/qt/6.7.0/mingw_64/include/QtCore/QVariant \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/QApplication \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qapplication.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/QLineEdit \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qlineedit.h \
-		G:/qt/6.7.0/mingw_64/include/QtGui/qtextcursor.h \
-		G:/qt/6.7.0/mingw_64/include/QtGui/qtextformat.h \
-		G:/qt/6.7.0/mingw_64/include/QtGui/qtextoption.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/QTextEdit \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qtextedit.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
 		../../../secondhelper.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsView \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsview.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qpainter.h \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qscrollarea.h
+		G:/qt/6.7.0/mingw_64/include/QtGui/qtextoption.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qscrollarea.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QApplication \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qapplication.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\thirdhelp.o ..\..\..\thirdhelp.cpp
 
 debug/tower.o: ../../../tower.cpp ../../../tower.h \
@@ -5002,6 +5005,9 @@ debug/tower.o: ../../../tower.cpp ../../../tower.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qguiapplication_platform.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		../../../enemy.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsItem \
 		G:/qt/6.7.0/mingw_64/include/QtMultimedia/QMediaPlayer \

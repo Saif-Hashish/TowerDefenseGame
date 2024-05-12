@@ -11,6 +11,7 @@
 
 
 
+
 StartMenu::StartMenu(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::StartMenu)
@@ -30,6 +31,7 @@ StartMenu::~StartMenu()
     delete ui;
     delete map; // Delete the map object
     delete view; // Delete the view object
+
 }
 
 void StartMenu::on_startbutton_clicked()

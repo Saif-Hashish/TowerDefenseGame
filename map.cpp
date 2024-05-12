@@ -2,6 +2,10 @@
 #include <QtWidgets/QGraphicsScene>
 #include <QMouseEvent>
 #include <QGraphicsRectItem>
+#include <QGraphicsProxyWidget>
+#include <QFont>
+#include <QObject>
+#include <shop.h>
 
 //Initialize the map
 Map::Map() {
@@ -22,6 +26,26 @@ void Map::startScene(){
     QPixmap backgroundImage(":/OtherImages/map.png");
     backgroundImage.scaled(this->width, this->height, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     this->setBackgroundBrush(backgroundImage);
+
+
+    // initialize shop button
+    shopbutton = new QPushButton("Shop");
+
+
+    // add it to the scene
+    QGraphicsProxyWidget *shoppushbutton = this->addWidget(shopbutton);
+
+    QFont font("Arial", 20);
+
+    QObject ::connect(shopbutton, &QPushButton::clicked, [=](){
+
+        Shop *shop = new Shop();
+        shop->show();
+
+    });
+
+    shoppushbutton->setFont(font);
+    shoppushbutton->setGeometry(QRectF(1200,100,200,100));
 
     lblHealth = new QLabel();
     lblScore = new QLabel();

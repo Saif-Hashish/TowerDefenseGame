@@ -5,6 +5,7 @@
 #include "map.h"
 #include "gamecontroller.h"
 
+
 namespace Ui {
 class StartMenu;
 }
@@ -33,6 +34,7 @@ private:
     GameController gamecontroller;
 
     QGraphicsView* view ;
+
 };
 
 #endif // STARTMENU_H

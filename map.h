@@ -4,6 +4,7 @@
 #include <QObject>
 #include <vector>
 #include <QLabel>
+#include <QPushButton>
 
 class Map : public QGraphicsScene
 {
@@ -16,6 +17,8 @@ private:
 
     void createPath(int level, double enemySpeed);
     void createTiles();
+
+    QPushButton *shopbutton;
 
     QLabel* lblHealth;
     QLabel* lblLevel;
