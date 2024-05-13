@@ -18,6 +18,14 @@ public:
 private slots:
     void on_back_clicked();
 
+    void on_cannonbuy_clicked();
+
+    void on_infernobuy_clicked();
+
+    void on_xbowbuy_clicked();
+
+    void on_teslabuy_clicked();
+
 private:
     Ui::Shop *ui;
 };

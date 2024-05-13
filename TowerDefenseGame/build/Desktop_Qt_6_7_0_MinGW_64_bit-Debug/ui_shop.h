@@ -49,7 +49,7 @@ public:
         inferno->setGeometry(QRect(660, 80, 261, 191));
         tesla = new QLabel(Shop);
         tesla->setObjectName("tesla");
-        tesla->setGeometry(QRect(690, 470, 261, 191));
+        tesla->setGeometry(QRect(680, 470, 261, 191));
         Xbow = new QLabel(Shop);
         Xbow->setObjectName("Xbow");
         Xbow->setGeometry(QRect(190, 470, 261, 191));

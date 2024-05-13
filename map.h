@@ -27,9 +27,9 @@ public:
     Map();
     void startScene();
 
-    void setHealthLabelText(char* text);
-    void setLevelLabelText(char* text);
-    void setScoreLabelText(char* text);
+    void setHealthLabelText(QString text);
+    void setLevelLabelText(QString text);
+    void setCoinsLabelText(QString text);
 
     void setEnemySpeed(double numPixelsPerMove);
 

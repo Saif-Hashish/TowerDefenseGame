@@ -45,3 +45,21 @@ void Shop::on_cannonbuy_clicked()
 
 }
 
+
+void Shop::on_infernobuy_clicked()
+{
+
+}
+
+
+void Shop::on_xbowbuy_clicked()
+{
+
+}
+
+
+void Shop::on_teslabuy_clicked()
+{
+
+}
+

@@ -7,6 +7,7 @@
 #include <QObject>
 #include <shop.h>
 
+
 //Initialize the map
 Map::Map() {
     QGraphicsScene();
@@ -45,11 +46,33 @@ void Map::startScene(){
     });
 
     shoppushbutton->setFont(font);
+
+    // place button in correct position
     shoppushbutton->setGeometry(QRectF(1200,100,200,100));
 
+    //make labels for health, coins and Level
     lblHealth = new QLabel();
     lblScore = new QLabel();
     lblLevel = new QLabel();
+
+    QGraphicsProxyWidget *healthlabel = this->addWidget(lblHealth);
+    QGraphicsProxyWidget *coinslabel = this->addWidget(lblScore);
+    QGraphicsProxyWidget *levellabel = this->addWidget(lblLevel);
+
+    healthlabel->setFont(font);
+    coinslabel->setFont(font);
+    levellabel->setFont(font);
+
+    // place labels in correct position
+    levellabel->setGeometry(QRectF(700,50,20,10));
+    healthlabel->setGeometry(QRectF(5,0,20,10));
+    coinslabel->setGeometry(QRectF(5,50,20,10));
+
+
+    // initialize labels with correct values
+    setHealthLabelText("0");
+    setLevelLabelText("1");
+    setCoinsLabelText("0");
 
     createTiles();
 }
@@ -151,14 +174,14 @@ void Map::createPath(int level, double enemySpeed){
     }
 }
 
-void Map::setHealthLabelText(char* text){
-    lblHealth->setText(text);
+void Map::setHealthLabelText(QString text){
+    lblHealth->setText("Health: " + text);
 }
-void Map::setLevelLabelText(char* text){
-    lblLevel->setText(text);
+void Map::setLevelLabelText(QString text){
+    lblLevel->setText("Level: " + text);
 }
-void Map::setScoreLabelText(char* text){
-    lblScore->setText(text);
+void Map::setCoinsLabelText(QString text){
+    lblScore->setText("Coin Balance: " + text);
 }
 
 void Map::setEnemySpeed(double numPixelsPerMove){
