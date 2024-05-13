@@ -1,11 +1,15 @@
 #include "shop.h"
 #include "ui_shop.h"
 #include "QPixmap"
+#include <QFont>
 
-Shop::Shop(QWidget *parent)
+
+Shop::Shop(QWidget *parent, Map* originalmap)
     : QDialog(parent)
-    , ui(new Ui::Shop)
+    , ui(new Ui::Shop),
+    map(originalmap)
 {
+
     ui->setupUi(this);
 
     //set pictures for every tower
@@ -25,13 +29,19 @@ Shop::Shop(QWidget *parent)
     ui->tesla->setPixmap(teslaT.scaled(w,h,Qt::KeepAspectRatio));
     ui->Xbow->setPixmap(XbowT.scaled(w,h,Qt::KeepAspectRatio));
 
+    ui->coinbalance->setReadOnly(true);
 
+    QFont font("Arial", 12);
+
+    ui->coinbalance->setFont(font);
+    ui->coinbalance->setText("Coin Balance: " + QString::number(map->getcoinbalance()));
 
 }
 
 Shop::~Shop()
 {
     delete ui;
+
 }
 
 void Shop::on_back_clicked()
@@ -42,24 +52,24 @@ void Shop::on_back_clicked()
 
 void Shop::on_cannonbuy_clicked()
 {
-
+    map->Coins -= 500;
 }
 
 
 void Shop::on_infernobuy_clicked()
 {
-
+    map->Coins -= 750;
 }
 
 
 void Shop::on_xbowbuy_clicked()
 {
-
+    map->Coins -= 1000;
 }
 
 
 void Shop::on_teslabuy_clicked()
 {
-
+    map->Coins -= 1500;
 }
 

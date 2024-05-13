@@ -2,6 +2,7 @@
 #define SHOP_H
 
 #include <QDialog>
+#include "map.h"
 
 namespace Ui {
 class Shop;
@@ -12,7 +13,7 @@ class Shop : public QDialog
     Q_OBJECT
 
 public:
-    explicit Shop(QWidget *parent = nullptr);
+    explicit Shop(QWidget *parent = nullptr, Map* map = NULL);
     ~Shop();
 
 private slots:
@@ -28,6 +29,8 @@ private slots:
 
 private:
     Ui::Shop *ui;
+
+    Map *map;
 };
 
 #endif // SHOP_H

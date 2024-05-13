@@ -12,8 +12,10 @@ class Map : public QGraphicsScene
 private:
     int width = 1400;
     int height = 700;
-    int level;
     double enemySpeed = 2.5;
+    int health;
+
+    int Level;
 
     void createPath(int level, double enemySpeed);
     void createTiles();
@@ -22,14 +24,18 @@ private:
 
     QLabel* lblHealth;
     QLabel* lblLevel;
-    QLabel* lblScore;
+    QLabel* lblCoins;
 public:
     Map();
     void startScene();
 
-    void setHealthLabelText(QString text);
-    void setLevelLabelText(QString text);
-    void setCoinsLabelText(QString text);
+    void setHealthLabelText(int num);
+    void setLevelLabelText(int num);
+    void setCoinsLabelText(int num);
+
+    int Coins;
+
+    int getcoinbalance();
 
     void setEnemySpeed(double numPixelsPerMove);
 

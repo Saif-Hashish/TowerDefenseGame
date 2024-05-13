@@ -63,7 +63,6 @@ void Enemy::move() {
         // delete this;
         return;
     }
-
     // Set position to next point on path
     this->setX(map->path[currentIndex+1]->x());
     this->setY(map->path[currentIndex+1]->y());

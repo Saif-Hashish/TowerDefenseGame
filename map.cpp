@@ -8,11 +8,18 @@
 #include <shop.h>
 
 
+
 //Initialize the map
 Map::Map() {
+    // initialize health, score and level variables with correct values
+    health = 100;
+    Level = 1;
+    Coins = 1000;
+
     QGraphicsScene();
     startScene();
 }
+
 
 //Function that starts the scene with all its attribtues
 void Map::startScene(){
@@ -40,7 +47,7 @@ void Map::startScene(){
 
     QObject ::connect(shopbutton, &QPushButton::clicked, [=](){
 
-        Shop *shop = new Shop();
+        Shop *shop = new Shop(NULL, this);
         shop->show();
 
     });
@@ -52,11 +59,11 @@ void Map::startScene(){
 
     //make labels for health, coins and Level
     lblHealth = new QLabel();
-    lblScore = new QLabel();
+    lblCoins = new QLabel();
     lblLevel = new QLabel();
 
     QGraphicsProxyWidget *healthlabel = this->addWidget(lblHealth);
-    QGraphicsProxyWidget *coinslabel = this->addWidget(lblScore);
+    QGraphicsProxyWidget *coinslabel = this->addWidget(lblCoins);
     QGraphicsProxyWidget *levellabel = this->addWidget(lblLevel);
 
     healthlabel->setFont(font);
@@ -66,13 +73,12 @@ void Map::startScene(){
     // place labels in correct position
     levellabel->setGeometry(QRectF(700,50,20,10));
     healthlabel->setGeometry(QRectF(5,0,20,10));
-    coinslabel->setGeometry(QRectF(5,50,20,10));
+    coinslabel->setGeometry(QRectF(5,50,100,10));
 
-
-    // initialize labels with correct values
-    setHealthLabelText("0");
-    setLevelLabelText("1");
-    setCoinsLabelText("0");
+    // initialize health, score and level labels with correct values
+    setHealthLabelText(health);
+    setLevelLabelText(Level);
+    setCoinsLabelText(Coins);
 
     createTiles();
 }
@@ -174,17 +180,29 @@ void Map::createPath(int level, double enemySpeed){
     }
 }
 
-void Map::setHealthLabelText(QString text){
-    lblHealth->setText("Health: " + text);
+void Map::setHealthLabelText(int num){
+
+    lblHealth->setText("Health: " + (QString::number(num)));
 }
-void Map::setLevelLabelText(QString text){
-    lblLevel->setText("Level: " + text);
+
+void Map::setLevelLabelText(int num){
+    lblLevel->setText("Level: " + (QString::number(num)));
 }
-void Map::setCoinsLabelText(QString text){
-    lblScore->setText("Coin Balance: " + text);
+
+void Map::setCoinsLabelText(int num){
+
+    Coins = num;
+    lblCoins->setText("Coin Balance: " + (QString::number(num)));
+
+
 }
 
 void Map::setEnemySpeed(double numPixelsPerMove){
     enemySpeed = numPixelsPerMove;
+}
+
+int Map::getcoinbalance()
+{
+    return Coins;
 }
 

@@ -35,12 +35,14 @@ private:
     int waveInterval;
     int waveDuration;
     int playerHealth; // Declaration of playerHealth variable
+    int coinbalance;
 
     void spawnEnemy();
     void handleEnemyDestroyed(Enemy* destroyedEnemy);
     void handleEnemyDissapeared(Enemy* enemy);
     void handlePlayerLost();
     void handleTileSelected();
+
 };
 
 #endif // GAMECONTROLLER_H

@@ -1634,6 +1634,18 @@ release/moc_shop.cpp: ../../../shop.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qinputmethod.h \
 		G:/qt/6.7.0/mingw_64/include/QtCore/qlocale.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qguiapplication_platform.h \
+		../../../map.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsScene \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsscene.h \
+		G:/qt/6.7.0/mingw_64/include/QtGui/qpen.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QLabel \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qlabel.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
+		G:/qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
+		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		release/moc_predefs.h \
 		G:/qt/6.7.0/mingw_64/bin/moc.exe
 	G:\qt\6.7.0\mingw_64\bin\moc.exe $(DEFINES) --include "G:/Saif/computer science/TowerDefenseGame/TowerDefenseGame/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/release/moc_predefs.h" -IG:/qt/6.7.0/mingw_64/mkspecs/win32-g++ -I"G:/Saif/computer science/TowerDefenseGame" -IG:/qt/6.7.0/mingw_64/include -IG:/qt/6.7.0/mingw_64/include/QtMultimedia -IG:/qt/6.7.0/mingw_64/include/QtWidgets -IG:/qt/6.7.0/mingw_64/include/QtGui -IG:/qt/6.7.0/mingw_64/include/QtNetwork -IG:/qt/6.7.0/mingw_64/include/QtCore -I. -IG:/qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IG:/qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IG:/qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IG:/qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IG:/qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IG:/qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\..\..\shop.h -o release\moc_shop.cpp
@@ -3237,7 +3249,11 @@ release/gamecontroller.o: ../../../gamecontroller.cpp ../../../gamecontroller.h 
 		../../../tower.h \
 		../../../bullet.h \
 		G:/qt/6.7.0/mingw_64/include/QtCore/QString \
-		G:/qt/6.7.0/mingw_64/include/QtGui/QMouseEvent
+		G:/qt/6.7.0/mingw_64/include/QtGui/QMouseEvent \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QMessageBox \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qmessagebox.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qdialog.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\gamecontroller.o ..\..\..\gamecontroller.cpp
 
 release/infernotower.o: ../../../infernotower.cpp 
@@ -3679,7 +3695,8 @@ release/map.o: ../../../map.cpp ../../../map.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/QFont \
 		../../../shop.h \
 		G:/qt/6.7.0/mingw_64/include/QtWidgets/QDialog \
-		G:/qt/6.7.0/mingw_64/include/QtWidgets/qdialog.h
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qdialog.h \
+		G:/qt/6.7.0/mingw_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\map.o ..\..\..\map.cpp
 
 release/help.o: ../../../help.cpp ../../../help.h \
@@ -4328,8 +4345,21 @@ release/shop.o: ../../../shop.cpp ../../../shop.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qinputmethod.h \
 		G:/qt/6.7.0/mingw_64/include/QtCore/qlocale.h \
 		G:/qt/6.7.0/mingw_64/include/QtGui/qguiapplication_platform.h \
+		../../../map.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsScene \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsscene.h \
+		G:/qt/6.7.0/mingw_64/include/QtGui/qpen.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QLabel \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qlabel.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
+		G:/qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
+		G:/qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		G:/qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		ui_shop.h \
-		G:/qt/6.7.0/mingw_64/include/QtGui/QPixmap
+		G:/qt/6.7.0/mingw_64/include/QtGui/QPixmap \
+		G:/qt/6.7.0/mingw_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\shop.o ..\..\..\shop.cpp
 
 release/startmenu.o: ../../../startmenu.cpp ../../../startmenu.h \

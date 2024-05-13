@@ -1,6 +1,7 @@
 #include "gamecontroller.h"
 #include <QMouseEvent>
 #include <iostream>
+#include <QMessageBox>
 
 GameController::GameController(Map* map)
     : QObject(),
@@ -9,7 +10,8 @@ GameController::GameController(Map* map)
     numEnemiesPerWave(10),
     waveInterval(5000),
     waveDuration(10000),
-    playerHealth(100) // Initialize playerHealth with an initial value
+    playerHealth(100), // Initialize playerHealth with an initial value
+    coinbalance(1000) //initialize coin balance
 {
     this->map = map;
 
@@ -64,6 +66,11 @@ void GameController::spawnEnemy()
 
 void GameController::handleEnemyDestroyed(Enemy* destroyedEnemy) {
     if (destroyedEnemy) {
+
+        // increase coin balance
+        coinbalance += 150;
+        map->setCoinsLabelText(coinbalance);
+
         enemies.removeOne(destroyedEnemy);
 
         for(int i =0 ; i< towers.size(); i++){
@@ -90,7 +97,8 @@ void GameController::handleEnemyDissapeared(Enemy* enemy){
     for(int i =0 ; i< towers.size(); i++){
         towers[i]->setEnemies(enemies);
     }
-    playerHealth -= enemy->getHealth();
+    playerHealth -= 10;
+    map->setHealthLabelText(playerHealth);
     if(playerHealth <= 0){
         emit playerLost();
     }
@@ -98,7 +106,13 @@ void GameController::handleEnemyDissapeared(Enemy* enemy){
 }
 
 void GameController::handlePlayerLost(){
-    std::cout << "player lost... " << std::endl;
+
+    QMessageBox * msg = new QMessageBox();
+    msg->setWindowTitle("GAME OVER");
+    msg->setText("GAME OVER");
+    msg->show();
+
+    // close the game
 }
 
 void GameController::handleTileSelected(){
@@ -110,3 +124,5 @@ void GameController::handleTileSelected(){
         }
     }
 }
+
+
