@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 
 QT_BEGIN_NAMESPACE
@@ -20,50 +21,58 @@ QT_BEGIN_NAMESPACE
 class Ui_Shop
 {
 public:
-    QPushButton *pushButton;
-    QLabel *label;
-    QLabel *label_2;
-    QLabel *label_3;
-    QLabel *label_4;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_4;
+    QPushButton *cannonbuy;
+    QLabel *cannon;
+    QLabel *inferno;
+    QLabel *tesla;
+    QLabel *Xbow;
+    QPushButton *infernobuy;
+    QPushButton *teslabuy;
+    QPushButton *xbowbuy;
+    QPushButton *back;
+    QLineEdit *coinbalance;
 
     void setupUi(QDialog *Shop)
     {
         if (Shop->objectName().isEmpty())
             Shop->setObjectName("Shop");
-        Shop->resize(947, 583);
-        pushButton = new QPushButton(Shop);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(90, 230, 121, 51));
+        Shop->resize(1046, 903);
+        cannonbuy = new QPushButton(Shop);
+        cannonbuy->setObjectName("cannonbuy");
+        cannonbuy->setGeometry(QRect(220, 350, 141, 51));
         QFont font;
         font.setPointSize(15);
-        pushButton->setFont(font);
-        label = new QLabel(Shop);
-        label->setObjectName("label");
-        label->setGeometry(QRect(40, 20, 261, 191));
-        label_2 = new QLabel(Shop);
-        label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(330, 20, 261, 191));
-        label_3 = new QLabel(Shop);
-        label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(620, 20, 261, 191));
-        label_4 = new QLabel(Shop);
-        label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(40, 290, 261, 191));
-        pushButton_2 = new QPushButton(Shop);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(400, 230, 121, 51));
-        pushButton_2->setFont(font);
-        pushButton_3 = new QPushButton(Shop);
-        pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(690, 230, 121, 51));
-        pushButton_3->setFont(font);
-        pushButton_4 = new QPushButton(Shop);
-        pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setGeometry(QRect(90, 510, 121, 51));
-        pushButton_4->setFont(font);
+        cannonbuy->setFont(font);
+        cannon = new QLabel(Shop);
+        cannon->setObjectName("cannon");
+        cannon->setGeometry(QRect(190, 80, 261, 191));
+        inferno = new QLabel(Shop);
+        inferno->setObjectName("inferno");
+        inferno->setGeometry(QRect(660, 80, 261, 191));
+        tesla = new QLabel(Shop);
+        tesla->setObjectName("tesla");
+        tesla->setGeometry(QRect(680, 470, 261, 191));
+        Xbow = new QLabel(Shop);
+        Xbow->setObjectName("Xbow");
+        Xbow->setGeometry(QRect(190, 470, 261, 191));
+        infernobuy = new QPushButton(Shop);
+        infernobuy->setObjectName("infernobuy");
+        infernobuy->setGeometry(QRect(690, 350, 141, 51));
+        infernobuy->setFont(font);
+        teslabuy = new QPushButton(Shop);
+        teslabuy->setObjectName("teslabuy");
+        teslabuy->setGeometry(QRect(690, 720, 141, 51));
+        teslabuy->setFont(font);
+        xbowbuy = new QPushButton(Shop);
+        xbowbuy->setObjectName("xbowbuy");
+        xbowbuy->setGeometry(QRect(220, 720, 141, 51));
+        xbowbuy->setFont(font);
+        back = new QPushButton(Shop);
+        back->setObjectName("back");
+        back->setGeometry(QRect(30, 20, 111, 51));
+        coinbalance = new QLineEdit(Shop);
+        coinbalance->setObjectName("coinbalance");
+        coinbalance->setGeometry(QRect(220, 20, 161, 51));
 
         retranslateUi(Shop);
 
@@ -73,14 +82,16 @@ public:
     void retranslateUi(QDialog *Shop)
     {
         Shop->setWindowTitle(QCoreApplication::translate("Shop", "Dialog", nullptr));
-        pushButton->setText(QCoreApplication::translate("Shop", "Buy", nullptr));
-        label->setText(QCoreApplication::translate("Shop", "TextLabel", nullptr));
-        label_2->setText(QCoreApplication::translate("Shop", "TextLabel", nullptr));
-        label_3->setText(QCoreApplication::translate("Shop", "TextLabel", nullptr));
-        label_4->setText(QCoreApplication::translate("Shop", "TextLabel", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("Shop", "Buy", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("Shop", "Buy", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("Shop", "Buy", nullptr));
+        cannonbuy->setText(QCoreApplication::translate("Shop", "Buy for $500", nullptr));
+        cannon->setText(QCoreApplication::translate("Shop", "TextLabel", nullptr));
+        inferno->setText(QCoreApplication::translate("Shop", "TextLabel", nullptr));
+        tesla->setText(QCoreApplication::translate("Shop", "TextLabel", nullptr));
+        Xbow->setText(QCoreApplication::translate("Shop", "TextLabel", nullptr));
+        infernobuy->setText(QCoreApplication::translate("Shop", "Buy for $750", nullptr));
+        teslabuy->setText(QCoreApplication::translate("Shop", "Buy for $1500", nullptr));
+        xbowbuy->setText(QCoreApplication::translate("Shop", "Buy for $1000", nullptr));
+        back->setText(QCoreApplication::translate("Shop", "Back to game", nullptr));
+        coinbalance->setText(QCoreApplication::translate("Shop", "Coin Balance: ", nullptr));
     } // retranslateUi
 
 };

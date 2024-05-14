@@ -16,12 +16,11 @@ StartMenu::StartMenu(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::StartMenu)
     , map(new Map()) // Instantiate Map object
-    , gamecontroller(map) // Instantiate GameController object with Map
     , view(NULL)
 {
     ui->setupUi(this);
-    ui -> lineEdit -> setReadOnly(true);
-    ui -> lineEdit_2 -> setReadOnly(true);
+    // ui -> lineEdit -> setReadOnly(true);
+    // ui -> lineEdit_2 -> setReadOnly(true);
 
 
 }
@@ -36,6 +35,7 @@ StartMenu::~StartMenu()
 
 void StartMenu::on_startbutton_clicked()
 {
+    gameController = new GameController(map);
     hide();
 
     view = new QGraphicsView();
@@ -44,7 +44,6 @@ void StartMenu::on_startbutton_clicked()
     view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     view->show();
     view->setFixedSize(1400, 700);
-    //view->setAttribute(Qt::WA_AcceptTouchEvents, false);
     view->viewport()->setAttribute(Qt::WidgetAttribute::WA_AcceptTouchEvents, false);
 
 }

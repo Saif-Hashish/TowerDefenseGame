@@ -23,9 +23,6 @@ Enemy::Enemy(Map* map) : QObject(), QGraphicsPixmapItem() {
 
     // Add the enemy to the map and set its position to the starting point in the path
     map->addItem(this);
-    // set the position to the first position on the path
-    this->setX(map->path[0]->x());
-    this->setY(map->path[0]->y());
 
     healthBar.setMinimum(0);
     healthBar.setMaximum(100);
@@ -40,6 +37,19 @@ Enemy::Enemy(Map* map) : QObject(), QGraphicsPixmapItem() {
 
     // Set initial color of the health bar
     setHealthBarColor("green");
+
+    //determine the path of the enemy (some maps have more than one path) by a random assignment
+    if(map->path2.size() == 1){ // no alternate in existence
+        enemyPath = map->path;
+    }
+    else{
+        srand(time(0));
+        int rand = std::rand()%2;
+        (rand == 0) ? (enemyPath = map->path) : (enemyPath = map->path2);
+    }
+    // set the position to the first position on the path
+    this->setX(enemyPath[0]->x());
+    this->setY(enemyPath[0]->y());
 }
 
 // Destructor of the enemy
@@ -54,18 +64,16 @@ void Enemy::move() {
     size_t currentIndex = indexEnemyOnPath(this);
 
     // If the enemy has passed the whole path
-    if(currentIndex+1 == map->path.size()){
+    if(currentIndex+1 == enemyPath.size()){
         motionTimer->stop(); // Stop the timer
         // Emit the enemyDissapeared signal to be handled by the appropriate function (decrease player health)
         emit enemyDissapeared(this);
 
-        // Delete the enemy
-        // delete this;
         return;
     }
     // Set position to next point on path
-    this->setX(map->path[currentIndex+1]->x());
-    this->setY(map->path[currentIndex+1]->y());
+    this->setX(enemyPath[currentIndex+1]->x());
+    this->setY(enemyPath[currentIndex+1]->y());
 
     // Handles the colliding items
     QList<QGraphicsItem *> collideItems = collidingItems();
@@ -111,8 +119,9 @@ void Enemy::setHealthBarColor(const QString& color) {
 // Returns the index of the enemy on the path
 // If the enemy is not found returns -1
 int Enemy::indexEnemyOnPath(Enemy* enemy) {
-    for(size_t i = 0; i < map->path.size(); i++) {
-        if(enemy->x() == map->path[i]->x() && enemy->y() == map->path[i]->y()) {
+
+    for(size_t i = 0; i < enemyPath.size(); i++) {
+        if(enemy->x() == enemyPath[i]->x() && enemy->y() == enemyPath[i]->y()) {
             return i;
         }
     }

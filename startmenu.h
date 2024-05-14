@@ -31,7 +31,7 @@ private:
 
     Map* map;
 
-    GameController gamecontroller;
+    GameController* gameController = nullptr;
 
     QGraphicsView* view ;
 

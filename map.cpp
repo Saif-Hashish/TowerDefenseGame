@@ -5,9 +5,8 @@
 #include <QGraphicsProxyWidget>
 #include <QFont>
 #include <QObject>
+#include <QDebug>
 #include <shop.h>
-
-
 
 //Initialize the map
 Map::Map() {
@@ -28,7 +27,7 @@ void Map::startScene(){
     this->setSceneRect(0,0,width,height);
 
     //Initialize the path
-    createPath(1, 2.5);
+    createPath(4);
 
     //Create a background Image
     QPixmap backgroundImage(":/OtherImages/map.png");
@@ -46,7 +45,6 @@ void Map::startScene(){
     QFont font("Arial", 20);
 
     QObject ::connect(shopbutton, &QPushButton::clicked, [=](){
-
         Shop *shop = new Shop(NULL, this);
         shop->show();
 
@@ -120,63 +118,206 @@ void Map::createTiles(){
                     break;
                 }
             }
+            if(path2.size() != 1 && path2.size() != 0){
+            for(size_t k = 0; k< path2.size(); k++){
+
+                //check if the tile is on the path, if yes...
+                if(((i - path2[k]->x()) > -100 && (i - path2[k]->x()) < 100) && ((j - path2[k]->y()) > -100 && (j - path2[k]->y()) <100)){
+                    //.. make it impossible to put a tower on it and make its background sandy
+                    rectItem->setFlag(QGraphicsItem::ItemIsSelectable, false);
+                    rectItem->setBrush(pathBrush);
+                    break;
+                }
+            }
+            }
         }
     }
 }
 
 //Creates a path of tiles on which the enemies will move
-void Map::createPath(int level, double enemySpeed){
+void Map::createPath(int level){
+    path2.push_back(new QPoint(-1,-1)); //mark path2 as nonexistent by default
 
     //Create the path for level 1
     if(level == 1){
 
         //The shift points, the enemy will keep moving until it reaches them, then shifts
-        double shift1Y = 500;
-        double shift1X = 700;
-        double shift2Y = 300;
-        double shift2X = 400;
+        double shift1Y = 500, shift1X = 700, shift2Y = 300, shift2X = 400;
         double endpoint = -100; //adjusted to the height of the enemy (100 pixels)
 
         double indexX = this->width/2;
         double indexY = this->height;
-
-        QPoint* currentPoint;
         while(indexY > shift1Y){
-            currentPoint = new QPoint();
-            currentPoint->setX(indexX);
-            currentPoint->setY(indexY);
-            path.push_back(currentPoint);
-            indexY-=enemySpeed;
+            getPath(shift1Y, indexX, indexY, false);
         }
         while(indexX < shift1X){
-            currentPoint = new QPoint();
-            currentPoint->setX(indexX);
-            currentPoint->setY(indexY);
-            path.push_back(currentPoint);
-            indexX+=enemySpeed;
+            getPath(shift1X, indexX, indexY, true);
         }
         while(indexY > shift2Y){
-            currentPoint = new QPoint();
-            currentPoint->setX(indexX);
-            currentPoint->setY(indexY);
-            path.push_back(currentPoint);
-            indexY-=enemySpeed;
+            getPath(shift2Y, indexX, indexY, false);
         }
         while(indexX > shift2X){
-            currentPoint = new QPoint();
-            currentPoint->setX(indexX);
-            currentPoint->setY(indexY);
-            path.push_back(currentPoint);
-            indexX-=enemySpeed;
+            getPath(shift2X, indexX, indexY, true);
         }
         while(indexY >= endpoint){
-            currentPoint = new QPoint();
-            currentPoint->setX(indexX);
-            currentPoint->setY(indexY);
-            path.push_back(currentPoint);
-            indexY-=enemySpeed;
+            getPath(endpoint, indexX, indexY, false);
         }
 
+    }
+
+    else if(level == 2){
+        //The shift points, the enemy will keep moving until it reaches them, then shifts
+        double shift1Y = 400, shift1X = 200, shift2Y = 100, shift2X = 1000;
+        double endpoint = -100; //adjusted to the height of the enemy (100 pixels)
+
+        double indexX = this->width/2 - 100;
+        double indexY = this->height;
+
+        while(indexY > shift1Y){
+            getPath(shift1Y, indexX, indexY, false);
+
+        }
+        while(indexX > shift1X){
+            getPath(shift1X, indexX, indexY, true);
+
+        }
+        while(indexY > shift2Y){
+            getPath(shift2Y, indexX, indexY, false);
+        }
+        while(indexX < shift2X){
+            getPath(shift2X, indexX, indexY, true);
+        }
+        while(indexY >= endpoint){
+            getPath(endpoint, indexX, indexY, false);
+        }
+    }
+
+    else if(level == 3){
+        //The shift points, the enemy will keep moving until it reaches them, then shifts
+        double shift1Y = 100, shift1X = 300, shift2Y = 500, shift2X = 800;
+        double endpoint = 1500; //adjusted to the height of the enemy (100 pixels) (here, on the x-axis)
+
+        double indexX = 0;
+        double indexY = this->height - 100;
+
+        while(indexX < shift1X){
+            getPath(shift1X, indexX, indexY, true);
+        }
+        while(indexY > shift1Y){
+            getPath(shift1Y, indexX, indexY, false);
+
+        }
+        while(indexX < shift2X){
+             getPath(shift2X, indexX, indexY, true);
+
+        }
+        while(indexY < shift2Y){
+             getPath(shift2Y, indexX, indexY, false);
+        }
+        while(indexX < endpoint){
+             getPath(endpoint, indexX, indexY, true);
+
+        }
+    }
+
+    //this level has two paths so it initializes path1 and path2 as opposite yet identical paths
+    else if(level == 4){
+        path2.pop_back(); // remove the no path2 in existence marker
+
+        //The shift points, the enemy will keep moving until it reaches them, then shifts
+        double shift1Y = 200, shift1X = 100, shift2Y = 600, shift2X = 1200;
+        double endpoint = 1500; //adjusted to the height of the enemy (100 pixels) (here, on the x-axis)
+
+        double indexX = 0;
+        double indexY = this->height-100;
+
+        while(indexX < shift1X){
+            getPath(shift1X, indexX, indexY, true);
+        }
+        while(indexY > shift1Y){
+            getPath(shift1Y, indexX, indexY, false);
+
+        }
+        while(indexX < shift2X){
+            getPath(shift2X, indexX, indexY, true);
+
+        }
+        while(indexY < shift2Y){
+            getPath(shift2Y, indexX, indexY, false);
+        }
+        while(indexX < endpoint){
+            getPath(endpoint, indexX, indexY, true);
+
+        }
+
+        //The shift points, the enemy will keep moving until it reaches them, then shifts
+        shift1Y = 200, shift1X = 1200, shift2Y = 600, shift2X = 100;
+        endpoint = -100; //adjusted to the height of the enemy (100 pixels) (here, on the x-axis)
+
+        indexX = 1400;
+        indexY = 600;
+
+        while(indexX > shift1X){
+            getPath(shift1X, indexX, indexY,true, true);
+        }
+        while(indexY > shift1Y){
+            getPath(shift1Y, indexX, indexY, true, false);
+
+        }
+        while(indexX > shift2X){
+            getPath(shift2X, indexX, indexY, true, true);
+
+        }
+        while(indexY < shift2Y){
+            getPath(shift2Y, indexX, indexY, true, false);
+        }
+        while(indexX > endpoint){
+            getPath(endpoint, indexX, indexY, true, true);
+
+        }
+    }
+
+}
+
+//helper function to create new piont on the path
+void Map::getPath(double& targetCoordinate, double& currentIndexX, double& currentIndexY, bool isOnXAxis){
+    QPoint* currentPoint = new QPoint();
+    currentPoint->setX(currentIndexX);
+    currentPoint->setY(currentIndexY);
+    path.push_back(currentPoint);
+    findPath(targetCoordinate, enemySpeed, currentIndexX, currentIndexY, isOnXAxis);
+}
+
+//helper function to create new piont on the path for path2
+void Map::getPath(double& targetCoordinate, double& currentIndexX, double& currentIndexY, bool v2, bool isOnXAxis){
+    if(!v2){
+        getPath(targetCoordinate, currentIndexX, currentIndexY, isOnXAxis);
+        return;
+    }
+    QPoint* currentPoint = new QPoint();
+    currentPoint->setX(currentIndexX);
+    currentPoint->setY(currentIndexY);
+    path2.push_back(currentPoint);
+    findPath(targetCoordinate, enemySpeed, currentIndexX, currentIndexY, isOnXAxis);
+}
+
+//update indices according to targetCoordinate
+void Map::findPath(double& targetCoordinate, double& enemySpeed, double& indexX, double& indexY, bool isOnXAxis){
+    if(isOnXAxis){
+        if(targetCoordinate > indexX){
+            indexX+=enemySpeed;
+        }
+        else{
+            indexX-=enemySpeed;
+        }
+    }
+    else{
+        if(targetCoordinate > indexY){
+            indexY+=enemySpeed;
+        }
+        else{
+            indexY-=enemySpeed;
+        }
     }
 }
 

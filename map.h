@@ -17,14 +17,19 @@ private:
 
     int Level;
 
-    void createPath(int level, double enemySpeed);
-    void createTiles();
-
     QPushButton *shopbutton;
 
     QLabel* lblHealth;
     QLabel* lblLevel;
     QLabel* lblCoins;
+
+    void createPath(int level);
+    void createTiles();
+
+    void getPath(double& targetCoordinate, double& currentIndexX, double& currentIndexY,  bool isOnXAxis);
+    void getPath(double& targetCoordinate, double& currentIndexX, double& currentIndexY,  bool v2, bool isOnXAxis);
+    void findPath(double& enemySpeed, double& targetCoordinate, double &indexX, double &indexY, bool isOnXAxis);
+
 public:
     Map();
     void startScene();
@@ -40,6 +45,7 @@ public:
     void setEnemySpeed(double numPixelsPerMove);
 
     std::vector<QPoint*> path;
+    std::vector<QPoint*> path2;
     std::vector<QGraphicsRectItem*> tiles;
 };
 

@@ -38,6 +38,8 @@ private:
     QTimer *motionTimer;
     int indexEnemyOnPath(Enemy *);
     QProgressBar healthBar;
+
+    std::vector<QPoint*> enemyPath;
 };
 
 #endif // ENEMY_H

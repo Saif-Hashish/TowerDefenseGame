@@ -12,7 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
-#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 
 QT_BEGIN_NAMESPACE
@@ -22,8 +22,7 @@ class Ui_StartMenu
 public:
     QPushButton *startbutton;
     QPushButton *helpbutton;
-    QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
+    QLabel *label;
 
     void setupUi(QDialog *StartMenu)
     {
@@ -39,16 +38,14 @@ public:
         helpbutton = new QPushButton(StartMenu);
         helpbutton->setObjectName("helpbutton");
         helpbutton->setGeometry(QRect(160, 280, 161, 51));
-        lineEdit = new QLineEdit(StartMenu);
-        lineEdit->setObjectName("lineEdit");
-        lineEdit->setGeometry(QRect(160, 10, 161, 61));
+        label = new QLabel(StartMenu);
+        label->setObjectName("label");
+        label->setGeometry(QRect(130, 50, 211, 81));
         QFont font1;
-        font1.setPointSize(40);
-        lineEdit->setFont(font1);
-        lineEdit_2 = new QLineEdit(StartMenu);
-        lineEdit_2->setObjectName("lineEdit_2");
-        lineEdit_2->setGeometry(QRect(140, 90, 211, 61));
-        lineEdit_2->setFont(font1);
+        font1.setFamilies({QString::fromUtf8("Harlow Solid Italic")});
+        font1.setPointSize(22);
+        label->setFont(font1);
+        label->setAlignment(Qt::AlignCenter);
 
         retranslateUi(StartMenu);
 
@@ -60,8 +57,7 @@ public:
         StartMenu->setWindowTitle(QCoreApplication::translate("StartMenu", "Dialog", nullptr));
         startbutton->setText(QCoreApplication::translate("StartMenu", "Start Game", nullptr));
         helpbutton->setText(QCoreApplication::translate("StartMenu", "Help", nullptr));
-        lineEdit->setText(QCoreApplication::translate("StartMenu", "Tower ", nullptr));
-        lineEdit_2->setText(QCoreApplication::translate("StartMenu", "Defense", nullptr));
+        label->setText(QCoreApplication::translate("StartMenu", "Tower Defense", nullptr));
     } // retranslateUi
 
 };
